@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	overflow-x: hidden;
+}
+
+.con-table {
+	margin: 80px auto;
+	max-width: 1200px;
+	
+}
+
+.con-title{
+	position: relative;
+	left: 10px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+.con-writer {
+	position: relative; top: 0px;
+	font-size: 1.2em;
+	left: 10px;
+	margin-bottom: 5px;
+	padding-left: 20px;
+}
+.con-writedate {
+	position: relative; top: 0px;
+	color: gray;
+	left: 10px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+.con-readcount{
+	color: gray;
+	margin-left: 20px;
+}
+.con-content {
+	background-color: white;
+	min-height: 400px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 20px;
+}
+
+
+.con-line{
+	background-color: #bdbdbd;
+}
+
+.con-btn{
+	margin-top: 20px;
+	float: right;
+	margin-bottom: 80px;
+}
+.con-btn .cbtn{
+	border: 1px solid #ddd;
+	background-color: white;
+	width: 100px;
+	height: 42px;
+	border-radius: 4px;
+}
+.con-btn .btn-upd:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+.con-btn .btn-del:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+.con-btn .btn-list:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+.con-btn .btn-scr:hover{
+	border: 1px solid #F7D14C;
+	color: black;
+	background-color: #F7D14C;
+}
+
+.modal-btn{
+	width: 90px;
+	height: 36px;
+	border-radius: 4px;
+	border: 1px solid #70788d;
+	background-color: white;
+	color: #70788d;
+}
+
+.modal-btn:hover{
+	background-color: #70788d;
+	color: white;
+}
+
+.modal-content .modal-body .modal-btn .glyphicon{
+	margin-top: 2px;
+}
+
+.modal-content .modal-header{
+	text-align: center;
+}
+.modal-content .modal-header h3{
+	margin-top: 20px;
+	line-height: 115px;
+}

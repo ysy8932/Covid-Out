@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+.board_updatemain{
+	
+	height : 400px;
+	background-image: url('../../image/board1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align : center;
+}
+
+.board_updatemain h3 {
+	padding-top : 200px;
+	color: white;
+	font-size : 3em;
+	cursor : pointer;
+	margin: 0;
+}
+
+/* 본문 폼 쪽 css*/
+
+.board_updatec{
+	text-align : center;
+	margin-top: 40px;
+}
+
+.board_updateform{
+	text-align : left;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#smartEditor{
+	color : #f2f3f5;
+	
+}
+
+.com-up-wrap{
+	width:100%;
+	height:100%;
+	margin-bottom: 20px;
+}
+
+.board_updatecontents{
+	margin-left : 10%;
+	margin-right : 10%;
+}
+
+.board_topic {
+	width: 500px;
+	font-size: 16px;
+}
+
+.com-up-title{
+	float: left;
+	margin-bottom: 20px;
+}
+
+.dcom-photo{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+.com-up-writer{
+	float: right;
+}
+
+.board_hashform{
+	text-align : center;
+	padding-left : 10%;
+	padding-right : 10%;
+}
+
+.hashtag{
+	float : left;
+	border: 1px solid #ddd;
+	cursor : pointer;
+	margin-right : 20px;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 4px;
+}
+
+.hashtag_all{
+	width: 100%;
+	height: 80px;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.board_hashtag{
+	width: 500px;
+	padding: 14px 20px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	height: 55px;
+	font-size: 16px;
+	vertical-align: middle;
+	border-radius: 5px;
+}
+
+.glyphicon{
+	top: 2px;
+}
+
+.board_hashbtn{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	font-size : 1em;
+	margin-left : 5px;
+	border: 1px solid #70788d;
+	background-color: #70788d;
+	border-radius: 6px;
+	color: white;
+}
+
+.board_hashform{
+	widows: 100%;
+}
+
+.tagform{
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+.board_btngroup{
+	
+	text-align : center; padding-bottom: 30px
+}
+
+
+.board_listbtn, .board_savebutton{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	font-size : 1em;
+	margin-left : 10px;
+	border-radius: 4px;
+	border: 1px solid #70788d;
+	color: #70788d;
+	background-color: white;
+	margin-bottom: 80px;
+}
+
+.board_listbtn:hover, .board_savebutton:hover{
+	background-color: #70788d;
+	color: white;
+}

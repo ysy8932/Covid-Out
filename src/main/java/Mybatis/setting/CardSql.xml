@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="card">
+	<select id="maxNumOfCard" resultType="int">
+		select ifnull(max(cnum),0) from card
+	</select>
+	<!-- 전체 데이터 리스트 얻기 -->
+	<select id="selectAllOfCard" resultType="cdto">
+		select * from card order by cnum desc limit #{start},#{perpage}
+	</select>
+	<!-- 전체 갯수 얻기 -->
+	<select id="totalCountOfCard" resultType="int">
+		select count(*) from card
+	</select>
+	<!-- insert -->
+	<insert id="insertOfCard" parameterType="cdto">
+		insert into card (cmidnum, cwriter, csubject, ccontent, cwritedate, cphoto) values 
+		(#{cmidnum}, #{cwriter}, #{csubject}, #{ccontent}, now(), #{cphoto})
+	</insert>
+	<!-- 조회수 얻기 -->
+	<update id="updateReadCountCard" parameterType="String">
+		update card set creadcount=creadcount+1 where cnum=#{cnum}
+	</update>
+	<!--   num에 해당하는 게시글 가져오기 -->
+	<select id="selectOneOfCard" parameterType="String" resultType="cdto">
+		select * from card where cnum=#{cnum}
+	</select>
+	<update id="updateOfCard" parameterType="cdto">
+		update card set cwriter=#{cwriter}, csubject=#{csubject}, ccontent=#{ccontent} 
+		<if test="cphoto!=null">, cphoto=#{cphoto}</if> where cnum=#{cnum}
+	</update>
+	<delete id="deleteOfCard" parameterType="String">
+		delete from card where cnum=#{cnum}
+	</delete>
+	<select id="selectRankOfCard" resultType="cdto">
+		select * from card order by creadcount desc limit 0,9
+	</select>
+	<select id="SearchedCard" parameterType="HashMap" resultType="cdto">
+		<![CDATA[
+			SELECT * FROM card 
+		]]>
+		<include refid="dsearch"/>
+		<![CDATA[
+			ORDER BY cnum DESC
+			
+		]]>
+	</select>
+	<sql id="dsearch">
+		<if test="searchType != null">
+			<if test="searchType == 'all'.toString()">
+				where csubject Like CONCAT ('%', #{keyword}, '%') or ccontent Like CONCAT ('%', #{keyword}, '%') or cwriter Like CONCAT ('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 't'.toString()">
+				where csubject Like CONCAT ('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'c'.toString()">
+				where ccontent Like CONCAT ('%', #{keyword}, '%')
+			</if>
+			<if test="searchType == 'w'.toString()">
+				where cwriter Like CONCAT ('%', #{keyword}, '%')
+			</if>
+		</if>
+	</sql>
+</mapper>

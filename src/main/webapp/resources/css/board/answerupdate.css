@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.answer_updatelayout{
+	
+	background-color: #1f2c59;
+	background-size: cover;
+	background-position: center;
+	padding: 150px 0;
+}
+
+.answer_updatemain h3 {
+	color: white;
+	font-size : 3em;
+	text-align: center;
+	cursor : pointer;
+}
+
+/* 본문 폼 쪽 css*/
+
+.answer_updatec{
+	
+	background-color: #f2f3f5;
+	text-align : center;
+	
+}
+
+.answer_updateform{
+	background-color: #f2f3f5;	
+	padding: 5px 10px;
+	text-align : left;
+	margin-left : 5%;
+}
+
+#smartEditor{
+	background-color: #f2f3f5;
+	color : #f2f3f5;
+	
+}
+
+.answer_updatecontents{
+	width : 90%;
+	margin-left : 5%;
+}
+
+.answer_topic {
+	width: 500px;
+	padding: 0px 10px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	height: 30px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.answer_hashform{
+	background-color: #f2f3f5;
+	text-align : center;
+}
+
+
+.answer_hashtag{
+	width: 500px;
+	padding: 14px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	height: 55px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.answer_hashbtn{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	font-size : 1em;
+	margin-left : 25px;
+}
+
+.answer_btngroup{
+	
+	text-align : center; padding-bottom: 30px
+}
+
+
+.answer_listbtn, .answer_savebutton{
+	
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	font-size : 1em;
+	margin-left : 25px;
+}
+

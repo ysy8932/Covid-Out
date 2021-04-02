@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+div.mypage_hadder{
+	background-image: url('../../image/mypage_info.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width:100%;
+	height:550px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	transform:scale(0.8);
+	transition:1s;
+}
+div.mypage_hadder .header_title{
+	text-align: center;
+	font-family: 'nanumeb';
+	font-size:5em;
+	color:black;
+	opacity:0;
+	transform:scale(0.8);
+	transition-delay:0.5s;
+	transition-duration:0.5s;
+}
+	
+	
+div.mypage_wrapper{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	align-items: center;
+}
+
+div.mypage_title{
+	margin:70px 0 15px 0;
+	font-size: 2em;
+	font-weight: bold;
+	width:1200px;
+	display:flex;
+}
+
+div.mypage_menubar{
+	background-color:rgba(255,255,255,0.6);
+	width:80%;
+	margin-bottom:15px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position:relative;
+	margin-top:-100px;
+	box-shadow:1px 1px 5px #999;
+	transition:0.5s;
+
+}
+
+ul.mypage_menu_icon{
+	width:1200px;
+	height:100px;
+	display:flex;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+@media screen and (max-width:991px) {	
+	ul.mypage_menu_icon{
+		width:1200px;
+		height:100px;
+		display:flex;
+		list-style: none;
+		margin:0;
+		padding:0;
+	}
+	.mypage_menubar ul.mypage_menu_icon > li{
+		width:100%;
+	}
+	.mypage_menubar ul.mypage_menu_icon > li > a{
+		width:100%;
+		height:100%;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color:black;
+		font-weight:bold;
+		transform:scale(1.0);
+		transition: 0.3s;
+		text-decoration: none;
+	}
+}
+
+ul.mypage_menu_icon > li > a{
+	width:144px;
+	height:100px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color:black;
+	font-weight:bold;
+	transform:scale(1.0);
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+div.mypage_icon{
+	background-image: url('../../image/covid_symbol.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width:36px;
+	height:36px;
+	z-index:1;
+	margin:5px auto;
+	text-decoration: none;
+	
+}
+div.icon_mypage{
+	background-image: url('../../image/mypage.png');
+}
+div.icon_mycontent{
+	background-image: url('../../image/mycontent.png');
+}
+div.icon_scrap{
+	background-image: url('../../image/scrap.png');
+}
+div.icon_reservation{
+	background-image: url('../../image/reservation.png');
+}
+div.icon_myinformation{
+	background-image: url('../../image/information.png');
+}
+
+
+ul.mypage_menu_icon > li{
+	width:144px;
+	height:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+ul.mypage_menu_icon > li > a:hover{
+	background-color:rgba(170,204,255,1);
+	transform:scale(1.2);
+	color:black;
+}
+
+ul.mypage_menu_icon > li.mpick > a{
+	background-color:rgba(170,204,255,1);
+	color:black;
+}
+
+
+
+/* ===================================================== */
+/* 마이페이지 나의 정보 */
+
+.mycontent_info{
+	height:50vh;
+	width:64%;
+	margin-top:60px;
+	margin-left:18%;
+	margin-right:18%;
+	margin-bottom:120px;
+}
+.my_board_list{
+	height:100%;
+	width:64%;
+	margin-top:60px;
+	margin-left:18%;
+	margin-right:18%;
+	margin-bottom:120px;
+}
+.mycontent_scrap{
+	height:100%;
+	width:64%;
+	margin-top:60px;
+	margin-left:18%;
+	margin-right:18%;
+	margin-bottom:120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.mycontent_reservation{
+	height:100%;
+	width:64%;
+	margin-top:60px;
+	margin-left:18%;
+	margin-right:18%;
+	margin-bottom:120px;
+}
+.mycontent_main{
+	height:100%;
+	width:64%;
+	margin-top:60px;
+	margin-left:18%;
+	margin-right:18%;
+	margin-bottom:120px;
+}
+
+@media screen and (max-width:768px){
+	.mycontent_info{
+		height:50vh;
+		width:100%;
+		margin-top:60px;
+		margin-left:0%;
+		margin-right:0%;
+		margin-bottom:120px;
+	}
+	.mycontent_scrap{
+		height:100%;
+		width:100%;
+		margin-top:60px;
+		margin-left:0%;
+		margin-right:0%;
+		margin-bottom:120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.bscrap-table{
+		width: 100%;
+	}
+	
+} 
+
+
+
+
+

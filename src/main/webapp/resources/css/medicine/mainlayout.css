@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+*{
+	box-sizing : border-box;
+}
+
+.med_layout{
+	background-color:white;
+	background-size: cover; /*크기*/
+	background-position: center; /*포지션*/
+	text-align: center; /*가운데로 옮기게 도와주는것*/
+}
+
+
+.med_layout_title{
+	
+	width : 100%;
+	height : 600px;
+	background-image: url('../../image/medicine2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align : center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction: column;
+}
+
+.med_layout_title .med_search_container{
+	padding-top:85px;
+	margin:0;
+}
+
+.med_layout_title h3{
+	
+	font-size : 3.0em;
+	
+	font-weight: bold;
+	color:black;
+ 	cursor : pointer;
+}
+
+/*검색 */
+
+.med_text1{
+	
+	
+	width : 300px;
+	height : 60px;
+	border:none;
+	border-radius:10px;
+	font-weight:bold;
+	font-size:21px;
+	padding:0 10px;
+}
+
+/*버튼 여기 있어요 */
+.med_searchbtn{
+	margin-left : 15px;
+	width:150px;
+	height:60px;
+	border:none;
+	border-radius:15px;
+	font-weight:bold;
+	font-size:21px;
+	box-shadow:inset 0px 0px 300px #ddd;
+	transition:0.3s;
+	color:black;
+	
+}
+.med_searchbtn:hover{
+	box-shadow:inset 300px 0px 300px #bbb;
+}
+
+
+.med_search{
+	margin-top : 55px;
+	display : inline-block;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	padding : 20px;
+	width :800px;
+	border-radius: 20px;
+	
+}
+
+.med_search h4{
+	color : black;
+	font-size : 1.8em;
+	margin-bottom: 50px;
+}
+
+
+/*1200px*/
+.med_searchlist{
+	background-color : white;
+	height : 200%;
+	padding: 30px 0;
+	margin-top : 20px;
+	margin-bottom : 50px;
+	margin-left : 18%;
+	margin-right : 18%;
+	text-align : center;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom:300px;
+}
+
+@media screen and (max-width:768px){
+	.med_searchlist{
+		background-color : white;
+		height : 200%;
+		padding: 30px 0;
+		margin-top : 20px;
+		margin-bottom : 50px;
+		margin-left : 0%;
+		margin-right : 0%;
+		text-align : center;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+} 
+
+.med_searchpic{
+	
+	width : 200px;
+	height: 200px;
+}
+
+/*test*/
+
+.board_list{
+	background-color : white;
+	height : 250px;
+	border-top: 2px solid black;
+	padding: 30px 0;
+	margin-bottom : 50px;
+	margin-left : 10%;
+	margin-right : 10%;
+}
+
+.board_left{
+	background-color : pink;
+   float: right;
+   width: 70%;
+   margin-left :20px;
+   height : 200px;
+}
+
+
+.board_right{
+	background-color : #eee;
+   margin-left : 3%;
+   float: left;
+   width: 24%;
+   height : 200px;
+   cursor : pointer;
+}
+
+/*의약품 출력 관련 css */
+
+#med_searchlist h3{
+	
+	font-size : 1.8em;
+	font-weight: bold;
+
+}
+
+#med_searchlist p{
+	
+	font-size : 1.2em;
+	font-weight: bold;
+
+}
+
+.medi_test{
+	margin-bottom : 20px;
+	margin-top : 10px;
+	
+}
+
+.medi_click{
+	height : 60px;
+	display : flex;
+	align-items : center;
+	font-weight : bold;
+	border-bottom : 1px solid #eee;
+}
+
+.medi_no{
+	
+	float : left;
+	width : 15%;
+	text-align : center;
+
+}
+
+.medi_title{
+	
+	width : 1200px;
+	padding-left : 5px;
+	text-align : left;
+	cursor : pointer;
+} 
+.medi_title span {
+	padding-right : 10px;
+	float : right;
+}
+
+.display_medi {
+display:block;
+}
+
+.medi_contents{
+	text-align : left;
+	padding-top : 5px;
+	padding-left : 10px;
+	padding-bottom : 10px;
+	height : 120%;
+	line-height : 200%;
+}
+
+.medi_contents >a{
+	
+	font-weight : bold;
+	text-decoration : none;
+}
+
+

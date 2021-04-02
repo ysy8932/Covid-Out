@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="spring.dto.MemberDto" alias="mdto"/>
+		<typeAlias type="spring.dto.ReserveDto" alias="rdto"/>
+		<typeAlias type="spring.dto.AnswerDto" alias="adto"/>
+		<typeAlias type="spring.dto.BoardDto" alias="bdto"/>
+		<typeAlias type="spring.dto.CardDto" alias="cdto"/>
+		<typeAlias type="spring.dto.ScrapDto" alias="sdto"/>		
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="Mybatis/setting/MemberSql.xml"/>
+		<mapper resource="Mybatis/setting/ReserveSql.xml"/>
+		<mapper resource="Mybatis/setting/AnswerSql.xml"/>
+		<mapper resource="Mybatis/setting/BoardSql.xml"/>
+		<mapper resource="Mybatis/setting/CardSql.xml"/>
+		<mapper resource="Mybatis/setting/ScrapSql.xml"/>
+	</mappers>
+</configuration>

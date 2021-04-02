@@ -1,0 +1,16 @@
+diff a/src/main/java/spring/controller/bit/HomeController.java b/src/main/java/spring/controller/bit/HomeController.java	(rejected hunks)
+@@ -24,4 +24,14 @@
+ 	      return "/layout/main";
+ 	   }
+ 	
++	@GetMapping("/hospitalmain")
++	   public String goHoMain()
++	   {
++	      return "/hospital/hospitalmain";
++	   }
++	@GetMapping("/hospitallist")
++	   public String goHolist()
++	   {
++	      return "/hospital/hospitallist";
++	   }
+ }

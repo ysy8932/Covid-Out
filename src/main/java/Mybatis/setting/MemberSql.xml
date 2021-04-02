@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+
+	<!-- 가입 -->
+	<insert id="insertOfMember" parameterType="mdto">
+		insert into member (mid,mnick,memail,mpw,mhp,mrole,mchat) values (
+		#{mid},#{mnick},#{memail},#{mpw},#{mhp},#{mrole},#{mchat})
+	</insert>
+
+	<!-- 정보가져오기 -->
+	<select id="selectOneOfMember" parameterType="String" resultType="mdto">
+		select * from member where mid=#{mid}
+	</select>
+	
+	<!-- 정보가져오기 -->
+	<select id="selectOneToEmailOfMember" parameterType="String" resultType="mdto">
+		select * from member where memail=#{memail}
+	</select>
+
+	<!-- 수정-->
+	<update id="updateOfMember" parameterType="mdto">
+		update member set mid=#{mid},mnick=#{mnick},memail=#{memail},mhp=#{mhp},mchat=#{mchat}
+		 where mid=#{mid}
+	</update>
+
+	<!-- 삭제 -->
+	<delete id="deleteOfMember" parameterType="String">
+		delete from member where mid=#{mid}
+	</delete>
+
+	<!-- ID 중복확인 -->
+	<select id="idCheckOfMember" resultType="int">
+		select count(*) from member where mid=#{mid}
+	</select>
+
+	<!-- 로그인 -->
+	<select id="loginOfMember" parameterType="String" resultType="int">
+      select EXISTS (select * from member where mid=#{mid} and mpw=#{mpw}) as success
+   </select>
+   
+   <!-- 비번확인 -->
+	<select id="pwCheckOfMember" resultType="int">
+		select count(*) from member where mid=#{mid} and mpw=#{mpw}
+	</select>
+   
+   <!-- 비번변경 -->
+   <update id="updatePwOfMember" parameterType="String">
+		update member set mpw=#{mpw} where mid=#{mid}
+   </update>
+   
+   
+   <!-- mail 중복확인 -->
+   <select id="mailCheck" resultType="int">
+   		select count(*) from member where memail=#{memail}
+   </select>
+   
+   <!-- 닉네임 중복확인 -->
+   <select id="mnickCheck" resultType="int">
+   		select count(*) from member where mnick=#{mnick}
+   </select>
+   
+   
+   <!-- mail로 id가져오기 -->
+	<select id="findIdOfMember" parameterType="String" resultType="mdto">
+		select * from member where memail=#{memail}
+	</select>
+	
+	<!-- id와 mail로 아이디 존재여부 확인 -->
+   <select id="findpwtologin" parameterType="String" resultType="int">
+   		select EXISTS (select * from member where mid=#{mid} and memail=#{memail}) as success
+   </select>
+   
+   <!--mrole이 1인 데이터 가져오기  -->
+   <select id="selectAllOfMrole" parameterType="int" resultType="mdto">
+		select * from member where mrole=1
+	</select>
+   
+</mapper>

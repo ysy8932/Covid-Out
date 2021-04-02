@@ -1,0 +1,300 @@
+/* writeform */
+.rsv__con{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;		
+}
+.rsv__container{
+	margin-top: 200px;
+	width: 1000px;	
+	align-items: center;
+}
+.rsv__title, .rsv__section_title, .rsv__section_txt, .rsv__section3 {
+	text-align:center;	
+}
+.rsv__title{
+    font-weight: 700;
+    font-size: 32px;
+}
+.rsv__section_title{
+	font-weight: 500;
+    font-size: 40px;
+    line-height: 68px;	
+}
+.rsv__section_txt{
+	margin: 20px auto 0;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555;
+    font-weight: 300;
+}
+.rsv__section1{
+	float: left;
+    width: 450px;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.rsv__section2{
+	float: right;
+    width: 450px;
+}
+.rsv__section3{
+	clear: both;
+	margin-bottom: 30px;
+}
+.rsv__section4{
+	float: left;
+    width: 450px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.rsv__section5{
+	float: right;
+    width: 450px;
+}
+.rsv__select {
+float: left;
+width: 350px;
+height: 60px;
+line-height: 60px;
+font-size: 16px;
+border: 1px solid #bbb;
+padding:0 20px;
+box-sizing:border-box;
+margin-bottom: 20px;
+}
+.rsv__select_name{
+float: left;
+width: 350px;
+height: 60px;
+line-height: 60px;
+font-size: 20px;
+padding:0 20px;
+color: #1f2c59;
+box-sizing:border-box;
+margin-bottom: 20px;
+}	
+#rsv__select_date{
+width: 308px;
+height: 60px;
+line-height: 60px;
+font-size: 16px;
+border: 1px solid #bbb;
+padding:0 20px;
+box-sizing:border-box;
+}
+#rsv__select_time{
+float: left;
+width: 308px;
+height: 60px;
+line-height: 60px;
+font-size: 16px;
+border: 1px solid #bbb;
+padding:0 20px;
+box-sizing:border-box;
+margin-top: 20px;	
+}
+#rsv__memo{
+	width: 350px;
+    height: 275px;    
+    box-sizing: border-box;
+    resize: none;
+    border: 1px solid #bbb;
+}
+.rsv__writeformbtn{
+	
+	width: 120px;
+    padding: 14px 20px;
+    height: 55px;
+    box-sizing: border-box;
+    border: 4px solid #70788d;
+    background-color: #70788d;
+    color: white;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+
+/* updateform */
+
+.rsv__updateformbtn{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #1f2c59;
+	background-color:#1f2c59; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.rsv__gotolistbtn{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #70788d;
+	background-color:#70788d; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+
+/* list */
+.rsv__container{
+	margin-top: 50px;
+	width: 1000px;	
+	align-items: center;
+}
+.rsv__list_txt{
+    font-size: 15px;
+    color: #70788d;
+    font-weight: 300;
+}
+.rsv__listbox {
+	box-sizing: border-box;
+    width: 100%;
+    max-width: 710px;
+    padding: 35px 0;
+    margin: 0 auto;
+    border: 1px solid #1f2c59;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A54B4;
+    display: flex;
+    justify-content: center;
+}
+.rsv__listbox_time{
+	padding: 0 8%;
+    box-sizing: border-box;
+    max-width: 240px;
+    width: 100%;
+    align-self: center;
+    max-height: 300px;
+}
+.rsv__listbox_timeinfo{
+	text-align: center;
+    margin: auto;
+    font-size: 22px;
+    line-height: 33px;
+}
+.rsv_listbox_info{
+	padding: 0 8%;
+	line-height: 33px;
+	margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 450px;
+    text-align: left;
+    padding-left: 45px;
+    align-self: center;
+    border-left-style: solid;
+    border-left-width: 1px;    
+}
+.rsv__list_btn{
+	margin-top: 20px;
+}
+
+.rsv__btn_update{
+	cursor:pointer;
+	display: inline-block;
+    width: 150px;
+    height: 49px;
+    line-height: 47px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #cd056d;
+    background: transparent;
+    border: solid 1px #cd056d;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+}
+.rsv__btn_delete{
+	display: inline-block;
+    width: 150px;
+    height: 49px;
+    line-height: 47px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #514d4d;
+    background: transparent;
+    border: solid 1px #514d4d;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+}
+
+
+div.rsv_alert{
+		background-color:#fff;
+		width:100%;
+		height:1980px;;
+	}
+
+/* success */
+.rsv_success{
+	margin: auto; 
+	margin-top: 250px; 
+	width: 1000px;
+	align-items: center;	
+	display: flex;
+	justify-content: center;
+}
+.rsv_success_logo{
+	text-align: center;
+}
+.rsv_success_logo img{
+	width: 80px;
+}
+.rsv_success_main{
+	font-size: 24pt; 
+	text-align: center; 
+	font-weight: 700; 
+	display: grid;	
+}
+.rsv_success_nick{
+	color: #1f2c59; 
+	font-size: 27pt; 
+	font-weight: 800;
+}
+.rsv_success_text{
+	font-size: 20pt; 
+	text-align: 
+	center; 
+	font-weight: 500;
+}
+.rsv_success_btnlist{
+	margin: 30px;
+	align-items: center;	
+	display: flex;
+	justify-content: center;
+}
+.rsv__success_gotomainbtn{
+	width: 250px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #1f2c59;
+	background-color:#1f2c59; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.rsv__success_gotolistbtn{
+	width: 250px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #70788d;
+	background-color:#70788d; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}

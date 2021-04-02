@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+
+.board_contentsmain{
+	height : 400px;
+	background-image: url('../../image/board1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align : center;
+}
+
+.board_contentsmain h3 {
+	padding-top : 200px;
+	color: white;
+	font-size : 3em;
+	cursor : pointer;
+	margin-top: 0px;
+}
+
+/* 본문 폼 쪽 css*/
+
+.board_contentsc{
+	text-align : center;
+	padding-bottom : 30px;
+}
+
+.board_contentsc hr{
+	width: 80%;
+	margin-left: 10%;	
+}
+
+.board_contentsform{
+	padding: 40px 10px 20px 10px;
+	text-align : left;
+	margin-left : 10%;
+}
+
+.board_contentsform ul li{
+	list-style-type: none; float : left; margin-left : 5px
+}
+
+
+
+.board_concon{
+	width : 80%;
+	min-height : 20em;
+	margin-left : 10%;
+	height : 120%;
+}
+
+.bbtn{
+	border: 1px solid #ddd;
+	background-color: white;
+	width: 100px;
+	height: 42px;
+	border-radius: 4px;
+	margin-left: 5px;
+}
+
+.board_clistbtn:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+.board_cupdbutton:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+.board_cdelbutton:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+.board_cscrbutton:hover{
+	border: 1px solid #F7D14C;
+	color: black;
+	background-color: #F7D14C;
+}
+
+
+.board_conbtngrp{
+	text-align : center; 
+	padding-top:30px;
+	padding-bottom: 30px;
+}
+
+.board_conbtngrp hr{
+	width: 80%;
+	margin-left: 10%;	
+}
+
+/* 댓글 관련 css*/
+
+.comments_section{
+	padding-left : 10%;
+	padding-right : 10%;
+	
+}
+
+.comments_section hr{
+	border: 2px solid #bbb;
+	margin: 10px 0 0 0;
+}
+
+.board_comments{
+	width : 100%;
+}
+
+.board_comments a.update{
+	font-size: 1em;
+	margin-right: 10px;
+}
+.board_comments a.del{
+	font-size:1em;
+}
+.atag{
+	float: right;
+}
+
+.awriter{
+	padding-right: 2%;
+}
+
+.board_memo{
+	padding-top : 10px;
+	height :110%;
+}
+
+
+
+.ans_writeform{
+	width : 100%;
+	margin-top: 20px;
+}
+
+.ans_id{
+	
+	float : left;
+	padding-top : 15px;
+	padding-left : 20px;
+	width : 10%;
+}
+
+.ans_writearea{
+	width : 80%;
+	height : 100px;
+	float: left;
+	margin-right: 1%;	
+}
+
+.ans_savebtn{
+	width: 9%;
+	padding: 10px 10px;
+	height: 100px;
+	font-size : 1.2em;
+	background-color : #70788d;
+	margin-bottom : 20px;
+	border-radius: 4px;
+	border: 0;
+	color: white;
+	float: left;
+}
+
+#bModal-open{
+	overflow: hidden;
+}
+
+.modal-btn{
+	width: 90px;
+	height: 36px;
+	border-radius: 4px;
+	border: 1px solid #70788d;
+	background-color: white;
+	color: #70788d;
+}
+
+.modal-btn:hover{
+	background-color: #70788d;
+	color: white;
+}
+
+.modal-content .modal-body .modal-btn .glyphicon{
+	margin-top: 2px;
+}
+
+.modal-content .modal-header{
+	text-align: center;
+}
+.modal-content .modal-header h3{
+	margin-top: 20px;
+	line-height: 115px;
+}

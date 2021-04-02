@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="answer">
+	<select id="SelectAnswer" parameterType="String" resultType="adto">
+		select * from answer where acnum =#{acnum}
+	</select>
+	<select id="SelectOneAnswer" parameterType="String" resultType="adto">
+		select * from answer where aidx =#{aidx}
+	</select>
+	<select id="CountAnswer" parameterType="String" resultType="int">
+		select count(*) from answer where acnum =#{acnum}
+	</select>
+	<insert id="insertOfAnswer" parameterType="adto">
+		insert into answer (acnum,amidnum,awriter,amemo,awritedate,arestep,arelevel,aregroup) values (#{acnum},#{amidnum},#{awriter},#{amemo},now(),0,0,0)
+	</insert>
+	<delete id ="deleteOfAnswer" parameterType="String">
+		delete from answer where aidx =#{aidx}
+	</delete>
+	<update id ="updateOfAnswer" parameterType = "adto">
+	update answer set amemo = #{amemo} where aidx = #{aidx}
+	</update>
+</mapper>

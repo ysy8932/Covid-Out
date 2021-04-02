@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace ="board">
+	<select id ="selectDataOfBoard" resultType="bdto">
+	select * from board 
+	</select>
+	<insert id="insertOfBoard" parameterType="bdto">
+		insert into board (bmidnum,bwriter,bsubject,bcontent,bwritedate,bphoto,breadcount,regroup, restep, relevel) values (#{bmidnum},#{bwriter},#{bsubject},#{bcontent},now(),#{bphoto},0,#{regroup},#{restep}, #{relevel})
+	</insert>
+	<select id ="selectoneOfBoard" parameterType="String" resultType="bdto">
+	select * from board where bnum = #{bnum} 
+	</select>
+	<select id = "selectAllOfBoard" parameterType="HashMap" resultType ="bdto">
+	select * from board order by bwritedate desc, regroup desc, restep asc limit #{start},#{perpage}
+	</select>
+	<update id = "updateRestepOfBoard" parameterType ="HashMap">
+	<![CDATA[ update board set restep = restep+1 where regroup = #{regroup} and restep>#{restep}</!>]]>
+	</update>
+	<update id ="updateReadcountOfBoard" parameterType = "String">
+		update board set breadcount = breadcount+1 where bnum = #{bnum};
+	</update>
+	<select id ="selecthashtag" resultType="bdto">
+		select distinct hashtag from hashtag limit 10;
+	</select>
+	<select id ="selboardhash" resultType = "bdto" parameterType = "String">
+		select * from hashtag where hbnum = #{hbnum}
+	</select>
+	<select id ="selectboardtag" resultType="bdto" parameterType = "String">
+		select * from board b, hashtag h where b.bnum = h.hbnum and b.bnum = #{bnum};
+	</select>
+	<select id ="totalCountOfBoard" resultType ="int">
+		select count(*) from board 
+	</select>
+	<delete id = "deleteOfBoard" parameterType="String">
+		delete from board where bnum=#{bnum}
+	</delete>
+	<update id ="updateOfBoard" parameterType="bdto">
+		update board set bsubject=#{bsubject}, bcontent=#{bcontent}
+		<if test="bphoto!=null">,bphoto =#{bphoto}</if> where bnum = #{bnum}
+	</update>
+	<delete id ="deletehashtag" parameterType="bdto">
+		delete from hashtag where hbnum = #{hbnum} and hashtag = #{hashtag}
+	</delete>
+	<insert id ="inserthashtag" parameterType ="bdto">
+		insert into hashtag (hbnum,hashtag) values (#{hbnum},#{hashtag}) 
+	</insert>
+	<select id = "searchHashtag" resultType ="bdto" parameterType ="String">
+	 select * from board b, hashtag h where hashtag = #{hashtag} and b.bnum=h.hbnum order by bwritedate desc;
+	</select>
+	<select id ="selectMyBoard" parameterType ="HashMap" resultType = "bdto">
+	select * from board where bmidnum = #{bmidnum} limit #{start},#{perpage} 
+	</select>
+	<select id ="totalMyBoard" parameterType="String" resultType ="int">
+		select count(*) from board where bmidnum = #{bmidnum} order by bwritedate desc;
+	</select>
+	<select id="getphobnum" parameterType="String" resultType ="String">
+		select bnum from board where bphoto = #{bphoto};
+	</select>
+	<update id ="updatehasht" parameterType="String">
+		update hashtag set hbnum=#{hbnum} where hbnum=0
+	</update>
+	
+</mapper>

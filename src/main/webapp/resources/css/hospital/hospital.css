@@ -1,0 +1,401 @@
+/* 蹂묒썝寃��깋 硫붿씤 */
+.hospital__main {
+	background-position: center;
+	text-align: center;
+	
+}
+.hospital__main_title{
+	background-image: url('../../image/hospitallist.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	height: 550px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.hospital__main_title h2 {
+	color: black;
+	font-size: 60px;
+	margin: 0;	
+}
+.hospital__main_txt {
+	 background-color: rgba( 255, 255, 255, 0.4 );
+}
+.hospital__main_title span {
+	color: #1f2c59;
+	font-size: 22px;
+	margin: 50px 0 0 0;
+    line-height: 27px;
+    font-weight: 300;
+   	padding: 30px;
+   	 background-color: rgba( 255, 255, 255, 0.4 );
+}
+
+.hospital__searchcont {	
+	background: #f2f3f5;
+	padding: 30px 0;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 50px;
+	font-size: 14px;
+	color: #222;	
+}
+
+.hospital__search_text {
+	width: 500px;
+	padding: 14px 20px;
+	box-sizing: border-box;
+	border: 4px solid #ccc;
+	height: 55px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.hospital__search_text:focus {
+	background-color:#7d828f; 
+	color: white;
+	outline: none;
+}
+.hospital__search_btn{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #ccc;
+	background-color: #ccc; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.hospital__viewlist_btn {
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #ccc;
+	background-color: #ccc; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+.hospital__search_info {
+	margin-top: 10px;
+}
+.hospital__main_tiles {
+	display: flex;
+	justify-content: center;
+	background-color: #1f2c59;
+	background-size: cover;
+	padding: 100px 0 120px 0 ;
+
+}
+.hospital__main_inner{
+	max-width: 1200px;	
+
+}
+
+/* main_inner media queries */
+@media all and (max-width: 767px) {
+  .hospital__main_inner ul{
+  	list-style-type: none;
+  	display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .hospital__main_inner ul {
+  	list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .hospital__main_inner ul {
+  	list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hospital__main_tiles li a img {
+	max-width: 100%;	
+	padding: 50px 30% 20px;
+	box-sizing: border-box;
+}
+
+.hospital__main_tiles li a p {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	margin-bottom: 10px;
+	font-size: 16px;	
+}
+
+
+/* �븷�땲硫붿씠�뀡�꽔�쓣�젮怨좏뻼吏�留� �븞�맖
+.hospital__main_menu ul li a img.grow-img 
+{
+	width: 100px;
+	height: 100px;
+}
+.grow-img{
+	animation:fadeIn 1s forwards ease-in;
+	transition: 2s ease-in-out;
+} */
+
+/* 蹂묒썝 寃��깋 紐⑸줉 */
+
+.hospital__list {
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding: 150px 0;	
+}
+
+#hospital__list_title{
+	font-size: 30px;
+	color: #0770bb;	
+}
+.hospital__list_tabbox {
+    display: flex;
+	overflow: hidden;
+	justify-content: center;
+	margin-bottom: 50px;
+	height: 100px;
+	align-items: center;
+	letter-spacing: -6px;
+} 
+
+.hospital__list_listitem {
+    
+    height: 80px;
+    color: #000;
+    font-size: 18px;
+    line-height: 60px;
+    padding: 20px 60px;
+    min-width: 196px;
+    border-bottom: 2px solid #0770bb;
+	letter-spacing: -1px;
+	margin: 0;	
+	text-decoration: none;
+	vertical-align: middle;	
+	cursor:pointer;
+}
+
+.active1 {
+
+    position: relative;
+    border-left: 2px solid #0770bb;
+    border-top: 2px solid #0770bb;
+	border-right: 2px solid #0770bb;
+	border-bottom: 2px solid transparent;
+    color: #0770bb;
+    font-size: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.hospital__list_search_text {
+	width: 500px;
+	padding: 14px 20px;
+	box-sizing: border-box;
+	border: 4px solid #ccc;
+	height: 55px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.hospital__list_search_text:focus {
+	background-color:#7d828f; 
+	color: white;
+	outline: none;
+}
+.hospital__list_search_btn{
+	width: 100px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #1f2c59;
+	background-color:#1f2c59; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+.hospital__list_viewlist_btn {
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	box-sizing: border-box;
+	border: 4px solid #70788d;
+	background-color:#70788d; 
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+#hospital__list_container {
+	/*display: none;*/
+	width: 900px;
+	margin: 60px auto;
+}
+#hospital__list_container2{
+	display: none;
+	width: 900px;
+	margin: 60px auto;
+}
+.hospital__list_cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 16px;
+}
+.hospital__list_card {
+	background: white;
+	border-radius: 4px;
+	padding: 24px;
+	margin: 8px;
+	box-shadow: 0 0 16px rgba(0,0,0,0.1);
+	cursor:pointer;
+	width: auto;
+}
+
+
+.hospital__list_card h3{
+	margin: 0;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  .hospital__list_cards {
+    grid-template-columns: 1fr;
+  }
+}
+#pagination{
+	display:none;
+    text-align: center;
+    vertical-align: middle;
+}  
+#pagination .prev, #pagination .next {
+    margin-right: 4px;
+}
+
+nav#pagination ul li {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    cursor:pointer;
+}
+nav#pagination ul li.current{
+    background-color: #1f2c59;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+            text-align: center;
+    vertical-align: middle;
+}
+nav#pagination ul li.prev, nav#pagination ul li.next{
+  width: 40px;
+  height: 28px;
+}
+nav#pagination ul li:hover:not(.current) {
+background-color: #ddd;
+border-radius: 5px;
+}
+  
+/* Container media queries */
+@media (min-width: 500px) {
+  .hospital__list_container {
+    width: 400px;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .hospital__list_container {
+    width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hospital__list_container {
+    width: 800px;
+  }
+}
+
+
+/* hospitaldetail.jsp */
+@font-face{
+	src: url("font/NanumR.ttf");
+	font-family:"nanum";
+}
+
+	/* �럹�씠吏� �쟾泥� div */
+	.hospital_detail_container{
+		display: flex;
+		align-items: center;
+		flex-direction:column;
+		justify-content: center;
+		
+	}
+
+	.hospital_detail_informa{
+	background-image: url('../../image/hospitallist.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	height: 550px;
+	width: 100%;
+	display: flex;
+		align-items: center;
+		flex-direction:column;
+		justify-content: center;	
+	}
+	
+	/* 蹂묒썝�젙蹂� 諛� 踰꾪듉 */
+	.hospital_detail_txt{
+		/* border: 1px solid gray; */
+		font-size: 20px;
+		font-family: 'nanum';
+
+	}
+
+	/* �궛 �꽆�뼱�궛 蹂묒썝 �젣紐�  */
+	#hospital__detail_title{
+		font-size: 40px;
+		color: #0770bb;
+		text-align: center;
+		font-family: 'nanum';
+	}
+	
+	.hospital__detail_addr, .hospital__detail_tel{
+		margin: 0 50px;
+	}
+	
+	.hospital__detail_addr label, .hospital__detail_tel label{
+	margin: 0 50px;
+	}
+	#rsv__btn-insert{
+		display: none;
+	}
+	/* 吏��룄 */
+	#hospital__map{
+		width:	65%;	
+		height: 450px;
+		border-radius: 50px;
+		margin-top: 50px;
+		margin-bottom: 100px;
+	 /*	border: 1px solid rgba(0,0,0,.2);
+		border-bottom: none;
+		box-shadow: 0 0 20px rgba(0,0,0,.2);
+		box-sizing: border-box; */
+	}
+
+
+

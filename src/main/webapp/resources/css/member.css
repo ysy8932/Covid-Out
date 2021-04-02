@@ -1,0 +1,524 @@
+@charset "UTF-8";
+
+/* 로그인 */
+.login_container{
+	background-color: #fff;
+	background-size: cover;
+	background-position: center;
+	width:100%;
+	height:110vh;
+	padding:80px 0;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.login_wrapper{
+	width:400px;
+	height:750px;
+	background-color : rgba(164,171,196,0.5);
+	border-radius: 30px 0px 30px 0px;
+	box-shadow:5px 5px 10px #999;
+	margin-top:-30px;
+}
+
+.login_wrapper > form{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width:100%;
+}
+
+ /* 로고 */
+div.login_symbol_background{
+	background-color: white;
+	border-radius: 100%;
+	width:200px;
+	height:200px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0;
+}
+ /* 로그인 인풋창 */
+.login_wrapper form .login_input1{
+	height:40px;
+	width:300px;
+	position:relative;
+	margin-bottom:30px;
+} 
+
+.login_wrapper form .login_input1 .login_id{
+	height:100%;
+	width:100%;	
+	border:none;
+	background-color:rgba(0,0,0,0);
+	font-size:17px;
+	border-bottom:2px solid silver;
+}
+
+.login_wrapper form .login_input1 .login_id:focus ~ label,
+.login_wrapper form .login_input1 .login_id:valid ~ label{
+	transform:translateY(-30px);
+	font-size:15px;
+	color:black;
+}
+
+.login_wrapper form .login_input1 label{
+	position:absolute;
+	bottom:10px;
+	left:0;
+	color:gray;
+	pointer-events:none;
+	transition: all 0.3s ease;
+}
+
+.login_wrapper form .login_input1 .underline{
+	position:absolute;
+	bottom:0px;
+	height:2px;
+	width:100%;
+	background: #ccc;
+}
+
+.login_wrapper form .login_input1 .underline:before{
+	content:"";
+	position:absolute;
+	bottom:0px;
+	height:100%;
+	width:100%;
+	background: #1f2c59;
+	transform:scaleX(0);
+	transition:transform 0.3s ease;
+}
+
+.login_wrapper form .login_input1 .login_id:focus ~ .underline:before,
+.login_wrapper form .login_input1 .login_id:valid ~ .underline:before{
+	transform:scaleX(1);
+}
+
+/*  아이디 비밀번호 찾기  */
+.find_informaion{
+	display:flex;
+	justify-content: flex-start;
+	margin:0 45% 15px 0; 
+	color:rgba(128,128,128,1);
+	font-weight:bold;
+}
+
+.find_informaion p:hover{
+	cursor:pointer;
+	color:rgba(223,227,239,1.0);
+}
+
+
+	/* 로그인 버튼 */
+	
+.login_wrapper form .login_btns{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+	
+.login_btn{
+	width: 350px;
+	padding: 14px 20px;
+	height: 55px;
+	border-radius:4px;
+	color: gray;
+	background-color:rgba(0,0,0,0);
+	font-size: 16px;
+	font-weight:bold;
+	transition:ease-out 0.3s;
+	border:3px solid rgb(223,227,239);
+	outline:none;
+	position: relative;
+	z-index: 1;
+	
+}
+.login_btn:hover{
+	color:rgb(223,227,239);
+	cursor:pointer;
+}
+.login_btn:before{
+	transition:0.5s all ease;
+	position:absolute;
+	top:0;
+	left:50%;
+	right:50%;
+	bottom:0;
+	opacity:1;
+	content:"";
+	background-color:rgb(112,120,141);	
+}
+.login_btn:hover:before{
+	transition: 0.5s all ease;
+	left:0;
+	right:0;
+	opacity:1;
+	z-index:-1;
+}
+
+
+.signup_btn{
+	margin-top:10px;
+	width: 350px;
+	padding: 14px 20px;
+	height: 55px; 
+}
+
+/* 회원가입 선택 */
+.signup_container{
+	display:flex;
+	
+}
+
+.signup_container2{
+	background-color:rgba(64,71,96,0);
+	padding: 20px 20px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+.signup_container2 > a{
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+
+
+.signup_select{
+	background-color: rgba(223,227,239);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	width:400px;
+	height:600px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color:black;
+	border-radius: 25px;
+}
+.signup_select:hover{
+	box-shadow:5px 5px 10px #999;
+}
+.signup_select > img{
+	width:300px;
+	height:350px;
+}
+
+/* 이게 되려나 */
+p.normal_member{
+	position:relative;
+	top:0;
+	transition: all 0.5s;
+	font-size:1.5em;
+}
+p.normal_member:before{
+	content: "NORMAL";
+	position: absolute;
+	left: 0;
+	top: 25px;
+	width: 100%;
+	color:rgba(0,0,0,0);
+	transition: all 0.5s;
+}
+
+a.normal_m:hover p {
+	top:-25px;
+	color:rgba(0,0,0,0);
+}
+
+
+a.normal_m:hover ::before{
+	color:rgba(0,0,0,1);
+}
+
+
+p.pro_member{
+	position:relative;
+	top:0;
+	transition: all 0.5s;
+	font-size:1.5em;
+	
+}
+p.pro_member:before{
+	content: "PROFESSIONAL";
+	position: absolute;
+	left: 0;
+	top: 25px;
+	left:-45px;
+	width: 100%;
+	color:rgba(0,0,0,0);
+	transition: all 0.5s;
+}
+
+a.pro_m:hover p {
+	top:-25px;
+	color:rgba(0,0,0,0);
+}
+
+
+a.pro_m:hover ::before{
+	color:rgba(0,0,0,1);
+}
+
+
+/* // 이게 되네 ㅎㅎ */
+
+@media screen and (max-width:939px){
+	.signup_container{
+		flex-direction: column;
+		width:80%;
+	}
+	.signup_container{
+		width:90%;
+	}
+	.signup_container2 > a{
+		width:80%;
+	}
+	.signup_select{
+		width:100%;
+		height:300px;
+	}
+}
+
+/* 회원가입 */
+
+div.insert_member_container{
+	background-color: #fff;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	width:100%;
+	height:100%;
+	padding:100px 0;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+div.insert_member_wrapper{
+	width:550px;
+	height: 100vh;
+	background-color: white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow:10px 10px 30px #999;
+}
+div.insert_member_wrapper.updatewrapper{
+	height:80vh;
+}
+
+div.insert_member_wrapper > form{
+	width:90%;
+	height: 100vh;
+	margin:30px 0;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+}
+
+div.insert_member_wrapper.mform{
+	height:80vh;
+}
+div.insert_member_wrapper.mform > form{
+	height:80vh;
+}
+h2.signup_main_title{
+	display:block;
+	width:80%;
+	text-align: left;
+	font-weight:bold;
+	border-width: 0px 0px 3px 0px;
+	border-style:solid;
+	border-color:#ddd;
+	padding-bottom:15px;
+	
+}
+
+
+
+/* 회원가입 INPUT */
+
+label.signup_input{
+	position:relative;
+	width:80%;
+	margin-top:25px;
+}
+
+label.signup_input > input{
+	width:100%;
+	background: none;
+	padding:12px;
+	border-radius: 3px;
+	outline:none;
+	border:2px solid #ddd;
+}
+
+.signup_input_sp{
+	position:absolute;
+	left:12px;
+	top:calc(50%);
+	color: #aaa;
+	transform:translateY(-50%);
+	transition: 0.3s;
+	font-weight:bold;
+	vertical-align: center;
+}
+.signup_input_sp.update{
+	top:-1px;
+	background:#fff;
+	font-size:15px;
+	color:#222;
+}
+
+
+label.signup_input > input:valid,
+label.signup_input > input:focus{
+	border-color:#222;
+	transition-delay:0.1s;
+}
+
+
+label.signup_input > input:valid + .signup_input_sp,
+label.signup_input > input:focus + .signup_input_sp{
+	top:-1px;
+	background:#fff;
+	font-size:15px;
+	color:#222;
+}
+
+/* YES OR NO 설명 */
+div.signup_exbox{
+	border-width:2px 0;
+	border-style:solid;
+	border-color:#ddd;
+	border-radius: 3px;
+	padding:20px;
+	width:100%;
+	margin-top:25px;
+}
+
+
+div.signup_explain{
+	color:black;
+	font-weight: bold;
+	margin-top:20px;
+	
+}
+
+/*  YES or NO  */
+
+.signup_radio{
+	margin: 20px 0 10px 0;
+}
+
+.signup_radio label input[type="radio"]{
+	display:none;
+}
+
+.signup_radio label > span{
+	display:block;
+	border:4px solid rgb(223,227,239);
+	color:gray;
+	border-radius:4px;
+	cursor:pointer;
+	margin:10px 10px;
+	padding:10px auto;
+	width:80px;
+	box-shadow: inset 0px 0px 0px rgb(19,58,168);
+	transition:0.5s;
+}
+
+.signup_radio label input[type="radio"]:checked ~ span{
+	color:rgb(19,58,168);
+	border-color: rgb(19,58,168);
+	box-shadow: inset 100px 100px 100px rgb(19,58,168);
+	color:white;
+}
+
+
+/* 회원가입 제출 버튼! */
+
+div.insert_member_btn{
+	margin-top:25px;
+	width:100%;
+	display:flex;
+	flex-direction: column;
+}
+
+div.insert_member_btn .insrt_membtn{
+	position:relative;
+	box-shadow: inset 0px 0px 500px rgb(19,58,168);
+	border:none;
+	color:white;
+	font-weight:bold;
+	border-radius: 4px;
+	height:44px;
+	transition:0.2s;
+}
+
+div.insert_member_btn .insrt_membtn:before{
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:50%;
+	height:0px;
+	width:0px;
+	background-color:yellow;
+	transition: ease-out 0.5s;
+}
+
+div.insert_member_btn .insrt_membtn:hover{
+	box-shadow: inset 0px 0px 0px rgb(19,58,168);
+	color:rgb(19,58,168);
+	border-width:2px 2px 0px 2px;
+	border-style: solid;
+	border-color:rgb(19,58,168); 
+}
+
+div.insert_member_btn .insrt_membtn:hover:before{
+	background-color:rgb(19,58,168);
+	left:0;
+	right:0;
+	height:2px;
+	width:100%;
+}
+
+div.insert_member_btn .insrt_membtn2{
+	color:black;
+	box-shadow:inset 0px 0px 500px rgb(223,227,239);
+}
+
+div.insert_member_btn .insrt_membtn2:hover{
+	box-shadow: inset 0px 0px 0px red;
+	color:red;
+	border-color:red; 
+	background-color:white;
+}
+
+div.insert_member_btn .insrt_membtn2:hover:before{
+	background-color:red;
+	left:0;
+	right:0;
+	height:2px;
+	width:100%;
+}
+
+
+

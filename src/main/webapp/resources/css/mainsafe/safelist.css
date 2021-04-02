@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+/* 배너 */
+/* .img-cover{position: absolute;height: 100%;width: 100%;background-color: rgba(0, 0, 0, 0.5);z-index:1;} */
+.sub_visual .txt {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	z-index: 2;
+	text-align: center;
+}
+
+.sub_visual .txt h1:after {
+	display: block;
+	width: 40px;
+	height: 3px;
+	margin: 32px auto;
+	background: white;
+	content: '';
+}
+
+.sub_visual .txt p {
+	font-size: 14pt;
+	font-weight: 300;
+}
+
+.sub_visual {
+	position: relative;
+	background-image:
+		url('../../image/safemain.jpg');
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align : center;
+}
+/* 배너 */
+
+/*메뉴바 아이콘 */
+nav.tabs {
+  --active-item: 0;
+  --tab-icon-color: #457B9D;
+  --nav-width: 32rem;
+  --nav-height: 6rem;
+  border-radius: 10px;
+  position: relative;
+  top: -60px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+nav.tabs > div {
+  display: flex;
+  position: absolute;
+  width: var(--nav-width);
+  height: var(--nav-height);
+  justify-content: space-between;
+  align-items: stretch;
+  border: solid 0.5rem white;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+nav.tabs > div * {
+  transition: 0.25s;
+}
+
+nav.tabs > div > button {
+  position: relative;  
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  transform-origin: left;
+  transition: 0.25s;
+  
+}
+
+nav.tabs > div > button:hover {
+  cursor: pointer;  
+  background-color: #A8DADC;
+  border-radius: 10px;
+}
+
+nav.tabs > div::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--nav-width) / 4.5 * 1.5);
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--border-radius-sm);
+  transform: translateX(calc(var(--nav-width) / 4.5 * var(--active-item)));
+}
+
+nav.tabs > div > button > span {
+  position: absolute;
+  color: #457B9D;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0s;
+  top: 15px;
+}
+
+.tab-icon{
+	font-size: 2em;
+	top: 0px;
+}
+.tab-label{
+	font-weight: bold;
+	margin-top: 35px;
+}
+/*메뉴바 아이콘 */
+
+/* 타이틀 */
+.safe-title-bar{
+	position: relative;
+  	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	top: -360px;
+	
+}
+
+.safe-title-box{
+ 	width:600px;
+	height:100px;
+	background-color: #1f2c59;
+  	text-align: center;
+  	border-radius: 30px;
+}
+.safe-title{
+	font-weight: bold;
+	font-size: 3em;
+	margin-top: 20px;
+	color: white;
+}
+/* 타이틀 */
+
+/* 리스트 */
+.options {
+  display: flex;
+  overflow: auto;
+  width: calc(100%);
+  height: 800px;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: -70px;
+}
+
+.options .option {
+  position: relative;
+  overflow: auto;
+  min-width: 200px;
+  margin: 10px;
+  background-size: auto 120%;
+  background-position: center;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+   -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.options .option::-webkit-scrollbar { 
+    display: none !important; 
+}
+
+.options .option.active {
+  flex-grow: 10000;
+  transform: scale(1);
+  margin: 0px;
+  border-radius: 20px;
+  background-size: auto 100%;
+  /*&:active {
+     transform:scale(0.9);
+  }*/
+}
+
+.options .option.active .label {
+	
+  bottom: 20px;
+  left: 20px;
+}
+.options .option.active .label .info > div {
+  left: 0px;
+  opacity: 1;
+}
+.options .option:not(.active) {
+  flex-grow: 1;
+  border-radius: 30px;
+}
+
+.options .option:not(.active) .label {
+  bottom: 10px;
+  left: 10px;
+  
+}
+.options .option:not(.active) .label .info > div {
+  left: 20px;
+  opacity: 0;
+}
+
+.options .option .label {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.options .option .label .icon {
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #4a4643;
+  color: var(--defaultBackground);
+}
+.options .option .label .info {
+  color: black;
+  white-space:pre-wrap;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.options .option .label .info > div {
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+.main {
+  color:black;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.options .option .label .info .sub {
+  transition-delay: 0.1s;
+}
+
+.sub1{
+	font-size: 2em;
+	line-height: 2em;
+}
+.sub2{
+	font-size: 1.7em;
+	word-break:break-all;
+	line-height: 2em;
+	text-align: left;
+}
+.sub3{
+	font-size: 1.8em;
+	top: 20px;
+}
+
+div.option::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+/* 입국 */
+div.opt1::after {
+  background: url("https://blog.kakaocdn.net/dn/BfSHy/btqzukks0yl/sWypOGgT7O6kBhfelzYHR1/img.jpg");
+}
+div.opt2::after {
+  background: url("https://www.lufthansa.com/content/dam/lh/images/offers/destination/gla-square.jpg");
+}
+div.opt3::after {
+  background: url("https://blog.kakaocdn.net/dn/b46G6G/btqyI2j5WcN/vpsCJEU4j7AB1hH8Zgu7fK/img.jpg");
+}
+div.opt4::after {
+  background: url("https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/661/bf80ce622de44b55bf5adc834f9c4667.jpeg");
+}
+div.opt5::after {
+  background: url("https://a.cdn-hotels.com/gdcs/production127/d1781/ac9d03ef-22b4-4330-8e8d-695093138cf4.jpg");
+}
+/* 입국 */
+
+@media screen and (min-width: 1200px) {
+	
+}
+@media screen and (min-width: 992px) and (max-width:1199px) {
+	
+}
+@media screen and (min-width: 768px) and (max-width:991px) {
+	
+}
+@media screen and (max-width: 767px) {
+	
+}
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reserve">
+	<!-- 로그인한 사람의 예약 갯수 얻기 -->
+	<select id="totalCountOfReserve" parameterType="String" resultType="String">
+		select count(*) from reserve where rmnum=#{rmnum}
+	</select>
+	<!-- insert -->
+	<insert id="insertOfReserve" parameterType="rdto">
+		insert into reserve (rmnum,rdmnum,rmemo,rtime,rdate) values (#{rmnum},#{rdmnum},#{rmemo},#{rtime},#{rdate})
+	</insert>
+	<!-- getdata: 데이터가져오기 -->
+	<select id="selectOneOfReserve" parameterType="String" resultType="rdto">
+		select * from reserve where rnum=#{rnum}
+	</select>
+	<!-- list출력 -->
+	<select id="selectAllOfReserve" resultType="rdto">
+		select * from reserve order by rnum asc
+	</select>
+	<!-- update -->
+	<update id="updateOfReserve" parameterType="rdto">
+		update reserve set rmemo=#{rmemo},rtime=#{rtime},rdate=#{rdate} where rnum=#{rnum}
+	</update>
+	<!-- delete-->
+	<delete id="deleteOfReserve" parameterType="String">
+		delete from reserve where rnum=#{rnum}
+	</delete>
+		<!-- getdataID: id로 데이터가져오기 -->
+	<!-- <select id="selectRmOfReserve" parameterType="String" resultType="rdto">
+		select * from reserve where rmnum=#{rmnum} order by rnum desc
+	</select> -->
+	<!-- getdataID: id로 데이터가져오기 -->
+	<select id="selectRmOfReserve" parameterType="String" resultType="rdto">
+		select * from reserve r, member m where m.mnum=r.rdmnum and rmnum=#{rmnum} order by rnum desc
+	</select> 
+</mapper>

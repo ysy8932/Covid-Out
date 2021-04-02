@@ -1,0 +1,53 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="scrap">
+	<!--   board scrap list 출력 -->
+	<select id="selectAllOfbScrap" parameterType="HashMap" resultType="bdto">
+		select * from scrap s, board b where s.sbnum=b.bnum and s.smidnum=#{smidnum} order by snum desc limit #{start},#{perpage}
+	</select>
+	
+	<!--   card scrap list 출력 -->
+	<select id="selectAllOfcScrap" parameterType="HashMap" resultType="cdto">
+		select * from scrap s, card c where s.scnum=c.cnum and s.smidnum=#{smidnum} order by snum desc limit #{start},#{perpage}
+	</select>
+	
+	<!-- insert -->
+	<insert id="insertOfScrap" parameterType="sdto">
+		insert into scrap (smidnum,sbnum,scnum) values (#{smidnum},#{sbnum},#{scnum})
+	</insert>
+	
+	<!-- card중복확인 -->
+	<select id="cardCheck" parameterType="int" resultType="int">
+   		select count(*) from scrap where scnum=#{scnum} and smidnum=#{smidnum}
+   </select>
+   
+   <!-- 정보가져오기 -->
+	<select id="selectOneOfCardScrap" parameterType="int" resultType="sdto">
+		select * from scrap where scnum=#{scnum}
+	</select>
+	
+	<!-- idnum에대한 갯수 -->
+	<select id="totalCountOfScrapID" parameterType="int" resultType="int">
+		select count(*) from scrap where smidnum=#{smidnum}
+	</select>
+	
+	<!-- idnum에대한 갯수 -->
+	<select id="totalCountOfbScrapID" parameterType="int" resultType="int">
+		select count(*) from scrap where smidnum=#{smidnum} and sbnum
+	</select>
+	
+	<!-- idnum에대한 갯수 -->
+	<select id="totalCountOfcScrapID" parameterType="int" resultType="int">
+		select count(*) from scrap where smidnum=#{smidnum} and scnum
+	</select>
+	
+	<!-- card스크랩삭제 -->
+	<delete id = "deleteOfScrap" parameterType="int">
+		delete from scrap where smidnum=#{smidnum} and scnum=#{scnum} and sbnum=#{sbnum}
+	</delete>
+	
+	<!-- board중복확인 -->
+	<select id="boardCheck" parameterType="int" resultType="int">
+   		select count(*) from scrap where sbnum=#{sbnum} and smidnum=#{smidnum}
+	</select>
+	
+</mapper>

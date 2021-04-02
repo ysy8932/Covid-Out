@@ -1,0 +1,60 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+html,body {
+	overflow-x: hidden;
+}
+.dcom-con {
+	margin: 0 auto;
+}
+.dcom-con2 {
+	max-width: 100%;
+}
+.dcom-img-box img {
+	display: block;
+	width: 100%;
+}
+.editor {
+	margin: 40px auto;
+}
+
+.dcom-con {
+	max-width: 1200px;
+}
+
+.dcom-start {
+	margin-bottom: 20px;
+}
+.dcom-con-box{
+	width: 100%;
+}
+.dcom-title {
+	float: left;
+}
+
+.dcom-photo {
+	float: left;
+	margin-left: 10px;
+}
+
+.dcom-writer {
+	float: right;
+}
+
+.con-btn{
+	width: 100%;
+	height: 45px;
+	margin-left: 40%;
+	margin-bottom: 100px;
+}
+
+.con-btn .btn{
+	color: #70788d;
+}
+.con-btn .btn:hover{
+	background-color: #70788d;
+	color: white;
+}

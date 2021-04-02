@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+.board_delmain{
+	
+	height : 400px;
+	background-image: url('../../image/board1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align : center;
+}
+
+.board_delmain h3 {
+	padding-top : 200px;
+	color: white;
+	font-size : 3em;
+	cursor : pointer;
+	margin-top: 0px;
+}
+
+/* 본문 폼 쪽 css*/
+
+.board_delsc{
+	text-align : center;
+	padding-bottom : 30px;
+	
+}
+.board_delform{
+	padding: 5px 10px;
+	text-align : center;
+	margin-top: 10rem;
+}
+
+.board_delform ul li{
+	list-style-type: none; float : left; margin-left : 5px
+}
+
+.board_delcon{
+	width : 90%;
+	margin-left : 5%;
+	height : 500px;
+}
+
+.board_clistbtn,.board_cdelbutton{
+	width: 120px;
+	padding: 14px 20px;
+	height: 55px;
+	font-size : 1.2em;
+	border: 1px solid #70788d;
+	background-color: white;
+	border-radius: 6px;
+	color: #70788d;
+}
+.board_cdelbutton{
+	margin-left : 25px;
+}
+
+.board_clistbtn:hover, .board_cdelbutton:hover{
+	border: 1px solid #70788d;
+	color: white;
+	background-color: #70788d;
+}
+
+.board_delgrp{
+	text-align : center; 
+	padding-top:50px;
+	margin-bottom: 15%;
+}
+

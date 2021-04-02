@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.my_board_list{
+	
+	text-align : center;
+}
+
+.my_boardtu{
+	
+	margin-bottom : 5px;
+}
+
+.my_boardimg{
+	
+	width: 200px;
+	height:200px;
+	cursor:pointer;
+}
+
+.my_boardtu:hover {
+box-shadow: 1px 1px 20px #ddd;
+}
