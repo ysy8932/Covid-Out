@@ -14,7 +14,7 @@
 - 코로나 안심병원 리스트 (openAPI 활용)
 - 병원(전문회원) 예약 CRUD
 
-[Covid-Out portfolio](https://www.notion.so/Covid-out-476a896046e046af8895f2d3e2fbbf1e, "CovidOut")
+[Covid-Out portfolio]("https://www.notion.so/Covid-out-476a896046e046af8895f2d3e2fbbf1e", "CovidOut")
 
 * 이메일링크: <ysy8932@gmail.com>
 
